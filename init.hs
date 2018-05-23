@@ -24,8 +24,8 @@ fun x
 tresIguais :: Int -> Int -> Int -> Bool
 tresIguais x y z = (x == y) && (y == z)
 
-quatroBabys :: Int -> Int -> Int -> Int -> Bool
-quatroBabys a b c d = (a == b) && (b == c) && (c == d)
+cuatroBabys :: Int -> Int -> Int -> Int -> Bool
+cuatroBabys a b c d = (a == b) && (b == c) && (c == d)
 
 acc :: Int -> Int -> Int -> Int
 acc a b c
@@ -36,14 +36,28 @@ acc a b c
 diferentes :: Int -> Int -> Int -> Bool
 diferentes a b c = (a /= b) && (b/= c) && (c /= a)
 
+-- quantos sao iguais usando todosDiferentes e todosIguais
+-- quantosIguais ::
+
 elevaDois :: Int -> Int
 elevaDois n = (n * n)
 
 elevaQuatro :: Int -> Int
 elevaQuatro n = (n * n * n * n)
 
-vendas :: Int -> Int
+--vendas :: Int -> Int
 
+-- defini os tipos
+type Nome = String
+type Idade = Int
+-- funçao ver idade, retorna tipo idade
+verIdade :: (Nome, Idade) -> Idade
+verIdade (a,b) = b
+
+--funçao fatorial, entra um inteiro e devolve um inteiro
+fatorial :: Int -> Int
+fatorial 0    = 1
+fatorial n    = n * fatorial (n-1)
 
 -- definindo tipos
 -- tipo Pessoa(parametros)
@@ -52,13 +66,13 @@ type Pessoa = (String, String, Int)
 -- passa os parametros
 joao :: Pessoa
 joao = ("Joao Silva", "222-2222", 17)
-Pessoa
+
 -- nome
 nome :: Pessoa -> String
 nome (n,t,i) = n
 -- telefone
-telefone :: Pessoa -> String
+--telefone :: Pessoa -> String
 -- idade
-idade :: Pessoa -> Int
-idade (n,t,i) = i
-telefone (n,t,i) = t
+--idade :: Pessoa -> Int
+--idade (n,t,i) = i
+--telefone (n,t,i) = t
